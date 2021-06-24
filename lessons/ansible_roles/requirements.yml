@@ -1,0 +1,10 @@
+# from Ansible Galaxy
+- src: geerlingguy.docker
+
+- src: geerlingguy.nginx
+  version: 2.7.0
+  name: nginx
+
+# from a tar ball:
+# - src: file: ///opt/local/roles/myrole.tar
+#   name: myrole

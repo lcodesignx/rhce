@@ -1,0 +1,4 @@
+[smbfacts]
+package = samba
+service = smb
+state = enabled

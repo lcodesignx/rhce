@@ -1,0 +1,1792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.10" />
+<title></title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; vertical-align: text-bottom; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
+  margin-bottom: 2.5em;
+}
+
+#toctitle {
+  color: #527bbd;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+@media screen {
+  body {
+    max-width: 50em; /* approximately 80 characters wide */
+    margin-left: 16em;
+  }
+
+  #toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 13em;
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    margin: 0;
+    overflow: auto;
+    border-right: 3px solid #f8f8f8;
+    background-color: white;
+  }
+
+  #toc .toclevel1 {
+    margin-top: 0.5em;
+  }
+
+  #toc .toclevel2 {
+    margin-top: 0.25em;
+    display: list-item;
+    color: #aaaaaa;
+  }
+
+  #toctitle {
+    margin-top: 0.5em;
+  }
+}
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_linux_system_roles_network">linux-system-roles/network</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><a href="https://coveralls.io/github/linux-system-roles/network">image:https://coveralls.io/repos/github/linux-system-roles/network/badge.svg[Coverage
+Status</a>]
+<a href="https://travis-ci.com/linux-system-roles/network">image:https://travis-ci.com/linux-system-roles/network.svg?branch=master[Travis
+Build Status</a>]
+<a href="https://github.com/ambv/black">image:https://img.shields.io/badge/code%20style-black-000000.svg[Code
+Style: black</a>]
+<a href="https://lgtm.com/projects/g/linux-system-roles/network/context:python">image:https://img.shields.io/lgtm/grade/python/g/linux-system-roles/network.svg?logo=lgtm&amp;logoWidth=18[Language
+grade: Python</a>]</p></div>
+<div class="sect2">
+<h3 id="_overview">Overview</h3>
+<div class="paragraph"><p>The <code>network</code> role enables users to configure network on the target
+machines. This role can be used to configure:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Ethernet interfaces
+</p>
+</li>
+<li>
+<p>
+Bridge interfaces
+</p>
+</li>
+<li>
+<p>
+Bonded interfaces
+</p>
+</li>
+<li>
+<p>
+VLAN interfaces
+</p>
+</li>
+<li>
+<p>
+MacVLAN interfaces
+</p>
+</li>
+<li>
+<p>
+Infiniband interfaces
+</p>
+</li>
+<li>
+<p>
+Wireless (WiFi) interfaces
+</p>
+</li>
+<li>
+<p>
+IP configuration
+</p>
+</li>
+<li>
+<p>
+802.1x authentication
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_introduction">Introduction</h3>
+<div class="paragraph"><p>The <code>network</code> role supports two providers: <code>nm</code> and <code>initscripts</code>. <code>nm</code>
+is used by default in RHEL7 and <code>initscripts</code> in RHEL6. These providers
+can be configured per host via the <a href="#provider"><code>network_provider</code></a>
+variable. In absence of explicit configuration, it is autodetected based
+on the distribution. However, note that either <code>nm</code> or <code>initscripts</code> is
+not tied to a certain distribution. The <code>network</code> role works everywhere
+the required API is available. This means that <code>nm</code> requires at least
+NetworkManager&#8217;s API version 1.2 available. For <code>initscripts</code>, the
+legacy network service is required as used in Fedora or RHEL.</p></div>
+<div class="paragraph"><p>For each host a list of networking profiles can be configured via the
+<code>network_connections</code> variable.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+For <code>initscripts</code>, profiles correspond to ifcfg files in the
+<code>/etc/sysconfig/network-scripts/ifcfg-*</code> directory.
+</p>
+</li>
+<li>
+<p>
+For <code>NetworkManager</code>, profiles correspond to connection profiles as
+handled by NetworkManager. Fedora and RHEL use the <code>ifcfg-rh-plugin</code> for
+NetworkManager, which also writes or reads configuration files to
+<code>/etc/sysconfig/network-scripts/ifcfg-*</code> for compatibility.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Note that the <code>network</code> role primarily operates on networking profiles
+(connections) and not on devices, but it uses the profile name by
+default as the interface name. It is also possible to create generic
+profiles, by creating for example a profile with a certain IP
+configuration without activating the profile. To apply the configuration
+to the actual networking interface, use the <code>nmcli</code> commands on the
+target system.</p></div>
+<div class="paragraph"><p><strong>Warning</strong>: The <code>network</code> role updates or creates all connection profiles
+on the target system as specified in the <code>network_connections</code> variable.
+Therefore, the <code>network</code> role removes options from the specified
+profiles if the options are only present on the system but not in the
+<code>network_connections</code> variable. Exceptions are mentioned below.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_variables">Variables</h3>
+<div class="paragraph"><p>The <code>network</code> role is configured via variables starting with <code>network_</code>
+as the name prefix. List of variables:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>network_provider</code> - The <code>network_provider</code> variable allows to set a
+specific provider (<code>nm</code> or <code>initscripts</code>) . Setting it to
+<code>{{ network_provider_os_default }}</code>, the provider is set depending on
+the operating system. This is usually <code>nm</code> except for RHEL 6 or CentOS 6
+systems. Changing the provider for an existing profile is not supported.
+To switch providers, it is recommended to first remove profiles with the
+old provider and then create new profiles with the new provider.
+</p>
+</li>
+<li>
+<p>
+<code>network_connections</code> - The connection profiles are configured as
+<code>network_connections</code>, which is a list of dictionaries that include
+specific options.
+</p>
+</li>
+<li>
+<p>
+<code>network_allow_restart</code> - Certain configurations require the role to
+restart network services. For example, if a wireless connection is
+configured and NetworkManager-wifi is not installed, NetworkManager must
+be restarted prior to the connection being configured. Setting this to
+<code>no</code> will prevent the role from restarting network service.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_examples_of_variables">Examples of Variables</h3>
+<div class="paragraph"><p>Setting the variables</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_provider:</span> nm
+<span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> eth<span style="color:#b07e00">0</span>
+    <span style="color:#838183; font-style:italic">#...</span>
+<span style="color:#000000; font-weight:bold">network_allow_restart:</span> yes</code></pre>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_options">Options</h3>
+<div class="paragraph"><p>The <code>network_connections</code> variable is a list of dictionaries that
+include the following options. List of options:</p></div>
+<div class="sect3">
+<h4 id="_code_name_code_required"><code>name</code> (required)</h4>
+<div class="paragraph"><p>The <code>name</code> option identifies the connection profile. It is not the name
+of the networking interface for which the profile applies, though we can
+associate the profile with an interface and give them the same name.
+Note that you can have multiple profiles for the same device, but only
+one profile can be active on the device each time. For NetworkManager, a
+connection can only be active at one device each time.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+For <code>NetworkManager</code>, the <code>name</code> option corresponds to the
+<a href="https://developer.gnome.org/NetworkManager/stable/nm-settings.html#nm-settings.property.connection.id"><code>connection.id</code></a>
+property option. Although NetworkManager supports multiple connections
+with the same <code>connection.id</code>, the <code>network</code> role cannot handle a
+duplicate <code>name</code>. Specifying a <code>name</code> multiple times refers to the same
+connection profile.
+</p>
+</li>
+<li>
+<p>
+For <code>initscripts</code>, the <code>name</code> option determines the ifcfg file name
+<code>/etc/sysconfig/network-scripts/ifcfg-$NAME</code>. Note that the <code>name</code> does
+not specify the <code>DEVICE</code> but a filename. As a consequence, <code>'/'</code> is not
+a valid character for the <code>name</code>.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>You can also use the same connection profile multiple times. Therefore,
+it is possible to create a profile and activate it separately.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_code_state_code"><code>state</code></h4>
+<div class="paragraph"><p>The <code>state</code> option identifies what is the runtime state of each
+connection profile. The <code>state</code> option (optional) can be set to the
+following values:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>up</code> - the connection profile is activated
+</p>
+</li>
+<li>
+<p>
+<code>down</code> - the connection profile is deactivated
+</p>
+</li>
+</ul></div>
+<div class="sect4">
+<h5 id="_code_state_up_code"><code>state: up</code></h5>
+<div class="ulist"><ul>
+<li>
+<p>
+For <code>NetworkManager</code>, this corresponds to
+<code>nmcli connection id {{name}} up</code>.
+</p>
+</li>
+<li>
+<p>
+For <code>initscripts</code>, this corresponds to <code>ifup {{name}}</code>.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>When the <code>state</code> option is set to <code>up</code>, you can also specify the <code>wait</code>
+option (optional):</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>wait: 0</code> - initiates only the activation, but does not wait until the
+device is fully connected. The connection will be completed in the
+background, for example after a DHCP lease was received.
+</p>
+</li>
+<li>
+<p>
+<code>wait: &lt;seconds&gt;</code> is a timeout that enables you to decide how long you
+give the device to activate. The default is using a suitable timeout.
+Note that the <code>wait</code> option is only supported by NetworkManager.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Note that <code>state: up</code> always re-activates the profile and possibly
+changes the networking configuration, even if the profile was already
+active before. As a consequence, <code>state: up</code> always changes the system.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_code_state_down_code"><code>state: down</code></h5>
+<div class="ulist"><ul>
+<li>
+<p>
+For <code>NetworkManager</code>, it corresponds to
+<code>nmcli connection id {{name}} down</code>.
+</p>
+</li>
+<li>
+<p>
+For <code>initscripts</code>, it corresponds to call <code>ifdown {{name}}</code>.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>You can deactivate a connection profile, even if is currently not
+active. As a consequence, <code>state: down</code> always changes the system.</p></div>
+<div class="paragraph"><p>Note that if the <code>state</code> option is unset, the connection profile’s
+runtime state will not be changed.</p></div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_code_persistent_state_code"><code>persistent_state</code></h4>
+<div class="paragraph"><p>The <code>persistent_state</code> option identifies if a connection profile is
+persistent (saved on disk). The <code>persistent_state</code> option can be set to
+the following values:</p></div>
+<div class="sect4">
+<h5 id="_code_persistent_state_present_code_default"><code>persistent_state: present</code> (default)</h5>
+<div class="paragraph"><p>Note that if <code>persistent_state</code> is <code>present</code> and the connection profile
+contains the <code>type</code> option, the profile will be created or updated. If
+the connection profile is incomplete (no <code>type</code> option), the behavior is
+undefined. Also, the <code>present</code> value does not directly result in a
+change in the network configuration. If the <code>state</code> option is not set to
+<code>up</code>, the profile is only created or modified, not activated.</p></div>
+<div class="paragraph"><p>For NetworkManager, the new connection profile is created with the
+<code>autoconnect</code> option enabled by default. Therefore, NetworkManager can
+activate the new profile on a currently disconnected device.
+(<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1401515">rh#1401515</a>).</p></div>
+</div>
+<div class="sect4">
+<h5 id="_code_persistent_state_absent_code"><code>persistent_state: absent</code></h5>
+<div class="paragraph"><p>The <code>absent</code> value ensures that the profile is not present on the target
+host. If a profile with the given <code>name</code> exists, it will be deleted. In
+this case:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>NetworkManager</code> deletes all connection profiles with the
+corresponding <code>connection.id</code>. Deleting a profile usually does not
+change the current networking configuration, unless the profile was
+currently activated on a device. Deleting the currently active
+connection profile disconnects the device. That makes the device
+eligible to autoconnect another connection (for more details, see
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1401515">rh#1401515</a>).
+</p>
+</li>
+<li>
+<p>
+<code>initscripts</code> deletes the ifcfg file in most cases with no impact on
+the runtime state of the system unless some component is watching the
+sysconfig directory.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p><strong>Note</strong>: For profiles that only contain a <code>state</code> option, the <code>network</code>
+role only activates or deactivates the connection without changing its
+configuration.</p></div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_code_type_code"><code>type</code></h4>
+<div class="paragraph"><p>The <code>type</code> option can be set to the following values:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>ethernet</code>
+</p>
+</li>
+<li>
+<p>
+<code>bridge</code>
+</p>
+</li>
+<li>
+<p>
+<code>bond</code>
+</p>
+</li>
+<li>
+<p>
+<code>team</code>
+</p>
+</li>
+<li>
+<p>
+<code>vlan</code>
+</p>
+</li>
+<li>
+<p>
+<code>macvlan</code>
+</p>
+</li>
+<li>
+<p>
+<code>infiniband</code>
+</p>
+</li>
+<li>
+<p>
+<code>wireless</code>
+</p>
+</li>
+</ul></div>
+<div class="sect4">
+<h5 id="_code_type_ethernet_code"><code>type: ethernet</code></h5>
+<div class="paragraph"><p>If the type is <code>ethernet</code>, then there can be an extra <code>ethernet</code>
+dictionary with the following items (options): <code>autoneg</code>, <code>speed</code> and
+<code>duplex</code>, which correspond to the settings of the <code>ethtool</code> utility with
+the same name.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>autoneg</code>: <code>yes</code> (default) or <code>no</code> [if auto-negotiation is enabled or
+disabled]
+</p>
+</li>
+<li>
+<p>
+<code>speed</code>: speed in Mbit/s
+</p>
+</li>
+<li>
+<p>
+<code>duplex</code>: <code>half</code> or <code>full</code>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Note that the <code>speed</code> and <code>duplex</code> link settings are required when
+autonegotiation is disabled (autoneg:no).</p></div>
+</div>
+<div class="sect4">
+<h5 id="_code_type_bridge_code_code_type_bond_code_code_type_team_code"><code>type: bridge</code>, <code>type: bond</code>, <code>type: team</code></h5>
+<div class="paragraph"><p>The <code>bridge</code>, <code>bond</code>, <code>team</code> device types work similar. Note that <code>team</code>
+is not supported in RHEL6 kernels.</p></div>
+<div class="paragraph"><p>For slaves, the <code>slave_type</code> and <code>master</code> properties must be set. Note
+that slaves should not have <code>ip</code> settings.</p></div>
+<div class="paragraph"><p>The <code>master</code> refers to the <code>name</code> of a profile in the Ansible playbook.
+It is neither an interface-name nor a connection-id of NetworkManager.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+For NetworkManager, <code>master</code> will be converted to the
+<code>connection.uuid</code> of the corresponding profile.
+</p>
+</li>
+<li>
+<p>
+For initscripts, the master is looked up as the <code>DEVICE</code> from the
+corresponding ifcfg file.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>As <code>master</code> refers to other profiles of the same or another play, the
+order of the <code>connections</code> list matters. Profiles that are referenced by
+other profiles need to be specified first. Also, <code>--check</code> ignores the
+value of the <code>master</code> and assumes it will be present during a real run.
+That means, in presence of an invalid <code>master</code>, <code>--check</code> may signal
+success but the actual play run fails.</p></div>
+<div class="paragraph"><p>The <code>team</code> type uses <code>roundrobin</code> as the <code>runner</code> configuration. No
+further configuration is supported at the moment.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_code_type_vlan_code"><code>type: vlan</code></h5>
+<div class="paragraph"><p>Similar to <code>master</code>, the <code>parent</code> references the connection profile in
+the ansible role.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_code_type_macvlan_code"><code>type: macvlan</code></h5>
+<div class="paragraph"><p>Similar to <code>master</code> and <code>vlan</code>, the <code>parent</code> references the connection
+profile in the ansible role.</p></div>
+</div>
+<div class="sect4">
+<h5 id="_code_type_wireless_code"><code>type: wireless</code></h5>
+<div class="paragraph"><p>The <code>wireless</code> type supports WPA-PSK (password) authentication and
+WPA-EAP (802.1x) authentication.</p></div>
+<div class="paragraph"><p><code>nm</code> (NetworkManager) is the only supported <code>network_provider</code> for this
+type.</p></div>
+<div class="paragraph"><p>If WPA-EAP is used, ieee802_1x settings must be defined in the
+<a href="#-%60ieee802_1x%60">ieee802_1x</a> option.</p></div>
+<div class="paragraph"><p>The following options are supported:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>ssid</code>: the SSID of the wireless network (required)
+</p>
+</li>
+<li>
+<p>
+<code>key_mgmt</code>: <code>wpa-psk</code> or <code>wpa-eap</code> (required)
+</p>
+</li>
+<li>
+<p>
+<code>password</code>: password for the network (required if <code>wpa-psk</code> is used)
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_code_autoconnect_code"><code>autoconnect</code></h4>
+<div class="paragraph"><p>By default, profiles are created with autoconnect enabled.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+For <code>NetworkManager</code>, this corresponds to the <code>connection.autoconnect</code>
+property.
+</p>
+</li>
+<li>
+<p>
+For <code>initscripts</code>, this corresponds to the <code>ONBOOT</code> property.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect3">
+<h4 id="_code_mac_code"><code>mac</code></h4>
+<div class="paragraph"><p>The <code>mac</code> address is optional and restricts the profile to be usable
+only on devices with the given MAC address. <code>mac</code> is only allowed for
+<code>type</code> <code>ethernet</code> or <code>infiniband</code> to match a non-virtual device with the
+profile.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+For <code>NetworkManager</code>, <code>mac</code> is the permanent MAC address,
+<code>ethernet.mac-address</code>.
+</p>
+</li>
+<li>
+<p>
+For <code>initscripts</code>, <code>mac</code> is the currently configured MAC address of
+the device (<code>HWADDR</code>).
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect3">
+<h4 id="_code_mtu_code"><code>mtu</code></h4>
+<div class="paragraph"><p>The <code>mtu</code> option denotes the maximum transmission unit for the profile&#8217;s
+device. The maximum value depends on the device. For virtual devices,
+the maximum value of the <code>mtu</code> option depends on the underlying device.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_code_interface_name_code"><code>interface_name</code></h4>
+<div class="paragraph"><p>For the <code>ethernet</code> and <code>infiniband</code> types, the <code>interface_name</code> option
+restricts the profile to the given interface by name. This argument is
+optional and by default the profile name is used unless a mac address is
+specified using the <code>mac</code> key. Specifying an empty string (<code>""</code>) means
+that the profile is not restricted to a network interface.</p></div>
+<div class="paragraph"><p><strong>Note:</strong> With
+<a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide/ch-Consistent_Network_Device_Naming.html">persistent
+interface naming</a>, the interface is predictable based on the hardware
+configuration. Otherwise, the <code>mac</code> address might be an option.</p></div>
+<div class="paragraph"><p>For virtual interface types such as bridges, the <code>interface_name</code> is the
+name of the created interface. In case of a missing <code>interface_name</code>,
+the <code>name</code> of the profile name is used.</p></div>
+<div class="paragraph"><p><strong>Note:</strong> The <code>name</code> (the profile name) and the <code>interface_name</code> (the
+device name) may be different or the profile may not be tied to an
+interface at all.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_code_zone_code"><code>zone</code></h4>
+<div class="paragraph"><p>The <code>zone</code> option sets the firewalld zone for the interface.</p></div>
+<div class="paragraph"><p>Slaves to the bridge, bond or team devices cannot specify a zone.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_code_ip_code"><code>ip</code></h4>
+<div class="paragraph"><p>The IP configuration supports the following options:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>address</code>
+</p>
+<div class="paragraph"><p>Manual addressing can be specified via a list of addresses under the
+<code>address</code> option.
+* <code>dhcp4</code> and <code>auto6</code></p></div>
+<div class="paragraph"><p>Also, manual addressing can be specified by setting either <code>dhcp4</code> or
+<code>auto6</code>. The <code>dhcp4</code> key is for DHCPv4 and <code>auto6</code> for StateLess Address
+Auto Configuration (SLAAC). Note that the <code>dhcp4</code> and <code>auto6</code> keys can
+be omitted and the default key depends on the presence of manual
+addresses.
+* <code>dhcp4_send_hostname</code></p></div>
+<div class="paragraph"><p>If <code>dhcp4</code> is enabled, it can be configured whether the DHCPv4 request
+includes the hostname via the <code>dhcp4_send_hostname</code> option. Note that
+<code>dhcp4_send_hostname</code> is only supported by the <code>nm</code> provider and
+corresponds to
+<a href="https://developer.gnome.org/NetworkManager/stable/nm-settings.html#nm-settings.property.ipv4.dhcp-send-hostname"><code>ipv4.dhcp-send-hostname</code></a>
+property.
+* <code>dns</code> and <code>dns_search</code></p></div>
+<div class="paragraph"><p>Manual DNS configuration can be specified via a list of addresses given
+in the <code>dns</code> option and a list of domains to search given in the
+<code>dns_search</code> option.
+* <code>route_metric4</code> and <code>route_metric6</code>
+** For <code>NetworkManager</code>, <code>route_metric4</code> and <code>route_metric6</code> corresponds
+to the
+<a href="https://developer.gnome.org/NetworkManager/stable/nm-settings.html#nm-settings.property.ipv4.route-metric"><code>ipv4.route-metric</code></a>
+and
+<a href="https://developer.gnome.org/NetworkManager/stable/nm-settings.html#nm-settings.property.ipv6.route-metric"><code>ipv6.route-metric</code></a>
+properties, respectively. If specified, it determines the route metric
+for DHCP assigned routes and the default route, and thus the priority
+for multiple interfaces.
+* <code>route</code></p></div>
+<div class="paragraph"><p>Static route configuration can be specified via a list of routes given
+in the <code>route</code> option. The default value is an empty list. Each route is
+a dictionary with the following entries: <code>network</code>, <code>prefix</code>, <code>gateway</code>
+and <code>metric</code>. <code>network</code> and <code>prefix</code> specify the destination network.
+Note that Classless inter-domain routing (CIDR) notation or network mask
+notation are not supported yet.
+* <code>route_append_only</code></p></div>
+<div class="paragraph"><p>The <code>route_append_only</code> option allows only to add new routes to the
+existing routes on the system.</p></div>
+<div class="paragraph"><p>If the <code>route_append_only</code> boolean option is set to <code>yes</code>, the specified
+routes are appended to the existing routes. If <code>route_append_only</code> is
+set to <code>no</code> (default), the current routes are replaced. Note that
+setting <code>route_append_only</code> to <code>yes</code> without setting <code>route</code> has the
+effect of preserving the current static routes.
+* <code>rule_append_only</code></p></div>
+<div class="paragraph"><p>The <code>rule_append_only</code> boolean option allows to preserve the current
+routing rules. Note that specifying routing rules is not supported yet.</p></div>
+</li>
+</ul></div>
+<div class="paragraph"><p><strong>Note:</strong> When <code>route_append_only</code> or <code>rule_append_only</code> is not specified,
+the <code>network</code> role deletes the current routes or routing rules.</p></div>
+<div class="paragraph"><p><strong>Note:</strong> Slaves to the bridge, bond or team devices cannot specify <code>ip</code>
+settings.</p></div>
+</div>
+<div class="sect3">
+<h4 id="_code_ethtool_code"><code>ethtool</code></h4>
+<div class="paragraph"><p>The ethtool settings allow to enable or disable various features. The
+names correspond to the names used by the <code>ethtool</code> utility. Depending
+on the actual kernel and device, changing some features might not be
+supported.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>  <span style="color:#000000; font-weight:bold">ethtool:</span>
+    <span style="color:#000000; font-weight:bold">features:</span>
+      <span style="color:#000000; font-weight:bold">esp_hw_offload:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">esp_tx_csum_hw_offload:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">fcoe_mtu:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">gro:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">gso:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">highdma:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">hw_tc_offload:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      l<span style="color:#b07e00">2</span><span style="color:#000000; font-weight:bold">_fwd_offload:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">loopback:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">lro:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">ntuple:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">rx:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">rx_all:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">rx_fcs:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">rx_gro_hw:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">rx_udp_tunnel_port_offload:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">rx_vlan_filter:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">rx_vlan_stag_filter:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">rx_vlan_stag_hw_parse:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">rxhash:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">rxvlan:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">sg:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tls_hw_record:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tls_hw_tx_offload:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tso:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_checksum_fcoe_crc:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_checksum_ip_generic:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      tx_checksum_ipv<span style="color:#b07e00">4</span>: yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      tx_checksum_ipv<span style="color:#b07e00">6</span>: yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_checksum_sctp:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_esp_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_fcoe_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_gre_csum_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_gre_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_gso_partial:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_gso_robust:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      tx_ipxip<span style="color:#b07e00">4</span><span style="color:#000000; font-weight:bold">_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      tx_ipxip<span style="color:#b07e00">6</span><span style="color:#000000; font-weight:bold">_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_nocache_copy:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_scatter_gather:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_scatter_gather_fraglist:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_sctp_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_tcp_ecn_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_tcp_mangleid_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_tcp_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      tx_tcp<span style="color:#b07e00">6</span><span style="color:#000000; font-weight:bold">_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_udp_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_udp_tnl_csum_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_udp_tnl_segmentation:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">tx_vlan_stag_hw_insert:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span>
+      <span style="color:#000000; font-weight:bold">txvlan:</span> yes<span style="color:#000000">|</span>no  <span style="color:#838183; font-style:italic"># optional</span></code></pre>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_code_ieee802_1x_code"><code>ieee802_1x</code></h4>
+<div class="paragraph"><p>Configures 802.1x authentication for an interface.</p></div>
+<div class="paragraph"><p>Currently, NetworkManager is the only supported provider and EAP-TLS is
+the only supported EAP method.</p></div>
+<div class="paragraph"><p>SSL certificates and keys must be deployed on the host prior to running
+the role.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>eap</code>
+</p>
+<div class="paragraph"><p>The allowed EAP method to be used when authenticating to the network
+with 802.1x.</p></div>
+<div class="paragraph"><p>Currently, <code>tls</code> is the default and the only accepted value.
+* <code>identity</code> (required)</p></div>
+<div class="paragraph"><p>Identity string for EAP authentication methods.
+* <code>private_key</code> (required)</p></div>
+<div class="paragraph"><p>Absolute path to the client&#8217;s PEM or PKCS#12 encoded private key used
+for 802.1x authentication.
+* <code>private_key_password</code></p></div>
+<div class="paragraph"><p>Password to the private key specified in <code>private_key</code>.
+* <code>private_key_password_flags</code></p></div>
+<div class="paragraph"><p>List of flags to configure how the private key password is managed.</p></div>
+<div class="paragraph"><p>Multiple flags may be specified.</p></div>
+<div class="paragraph"><p>Valid flags are:
+<strong> <code>none</code>
+</strong> <code>agent-owned</code>
+<strong> <code>not-saved</code>
+</strong> <code>not-required</code></p></div>
+<div class="paragraph"><p>See NetworkManager documentation on "Secret flag types" more details
+(<code>man 5 nm-settings</code>).
+* <code>client_cert</code> (required)</p></div>
+<div class="paragraph"><p>Absolute path to the client&#8217;s PEM encoded certificate used for 802.1x
+authentication.
+* <code>ca_cert</code></p></div>
+<div class="paragraph"><p>Absolute path to the PEM encoded certificate authority used to verify
+the EAP server.
+* <code>ca_path</code></p></div>
+<div class="paragraph"><p>Absolute path to directory containing additional pem encoded ca
+certificates used to verify the EAP server. Can be used instead of or in
+addition to ca_cert. Cannot be used if system_ca_certs is enabled.
+* <code>system_ca_certs</code></p></div>
+<div class="paragraph"><p>If set to <code>True</code>, NetworkManager will use the system&#8217;s trusted ca
+certificates to verify the EAP server.
+* <code>domain_suffix_match</code></p></div>
+<div class="paragraph"><p>If set, NetworkManager will ensure the domain name of the EAP server
+certificate matches this string.</p></div>
+</li>
+</ul></div>
+</div>
+<div class="sect3">
+<h4 id="_code_bond_code"><code>bond</code></h4>
+<div class="paragraph"><p>The <code>bond</code> setting configures the options of bonded interfaces (type
+<code>bond</code>). It supports the following options:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<code>mode</code>
+</p>
+<div class="paragraph"><p>Bonding mode. See the
+<a href="https://www.kernel.org/doc/Documentation/networking/bonding.txt">kernel
+documentation</a> or your distribution <code>nmcli</code> documentation for valid
+values. NetworkManager defaults to <code>balance-rr</code>.
+* <code>miimon</code></p></div>
+<div class="paragraph"><p>Sets the MII link monitoring interval (in milliseconds)</p></div>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples_of_options">Examples of Options</h3>
+<div class="paragraph"><p>Setting the same connection profile multiple times:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> Wired<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">type:</span> ethernet
+    <span style="color:#000000; font-weight:bold">interface_name:</span> eth<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">ip:</span>
+      dhcp<span style="color:#b07e00">4</span>: yes
+
+  - <span style="color:#000000; font-weight:bold">name:</span> Wired<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">state:</span> up</code></pre>
+</div></div>
+<div class="paragraph"><p>Activating a preexisting connection profile:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> eth<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">state:</span> up</code></pre>
+</div></div>
+<div class="paragraph"><p>Deactivating a preexisting connection profile:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> eth<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">state:</span> down</code></pre>
+</div></div>
+<div class="paragraph"><p>Creating a persistent connection profile:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> eth<span style="color:#b07e00">0</span>
+    <span style="color:#838183; font-style:italic">#persistent_state: present  # default</span>
+    <span style="color:#000000; font-weight:bold">type:</span> ethernet
+    <span style="color:#000000; font-weight:bold">autoconnect:</span> yes
+    <span style="color:#000000; font-weight:bold">mac:</span> <span style="color:#b07e00">00</span>:<span style="color:#b07e00">00</span>:<span style="color:#b07e00">5</span><span style="color:#000000; font-weight:bold">e:</span><span style="color:#b07e00">00</span>:<span style="color:#b07e00">53</span>:<span style="color:#b07e00">5</span>d
+    <span style="color:#000000; font-weight:bold">ip:</span>
+      dhcp<span style="color:#b07e00">4</span>: yes</code></pre>
+</div></div>
+<div class="paragraph"><p>Deleting a connection profile named <code>eth0</code> (if it exists):</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> eth<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">persistent_state:</span> absent</code></pre>
+</div></div>
+<div class="paragraph"><p>Configuring the Ethernet link settings:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> eth<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">type:</span> ethernet
+
+    <span style="color:#000000; font-weight:bold">ethernet:</span>
+      <span style="color:#000000; font-weight:bold">autoneg:</span> no
+      <span style="color:#000000; font-weight:bold">speed:</span> <span style="color:#b07e00">1000</span>
+      <span style="color:#000000; font-weight:bold">duplex:</span> full</code></pre>
+</div></div>
+<div class="paragraph"><p>Creating a bridge connection:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> br<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">type:</span> bridge
+    <span style="color:#838183; font-style:italic">#interface_name: br0  # defaults to the connection name</span></code></pre>
+</div></div>
+<div class="paragraph"><p>Configuring a bridge connection:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> internal-br<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">interface_name:</span> br<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">type:</span> bridge
+    <span style="color:#000000; font-weight:bold">ip:</span>
+      dhcp<span style="color:#b07e00">4</span>: no
+      auto<span style="color:#b07e00">6</span>: no</code></pre>
+</div></div>
+<div class="paragraph"><p>Setting <code>master</code> and <code>slave_type</code>:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> br<span style="color:#b07e00">0</span>-bond<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">type:</span> bond
+    <span style="color:#000000; font-weight:bold">interface_name:</span> bond<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">master:</span> internal-br<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">slave_type:</span> bridge
+
+  - <span style="color:#000000; font-weight:bold">name:</span> br<span style="color:#b07e00">0</span>-bond<span style="color:#b07e00">0</span>-eth<span style="color:#b07e00">1</span>
+    <span style="color:#000000; font-weight:bold">type:</span> ethernet
+    <span style="color:#000000; font-weight:bold">interface_name:</span> eth<span style="color:#b07e00">1</span>
+    <span style="color:#000000; font-weight:bold">master:</span> br<span style="color:#b07e00">0</span>-bond<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">slave_type:</span> bond</code></pre>
+</div></div>
+<div class="paragraph"><p>Configuring VLANs:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> eth<span style="color:#b07e00">1</span>-profile
+    <span style="color:#000000; font-weight:bold">autoconnet:</span> no
+    <span style="color:#000000; font-weight:bold">type:</span> ethernet
+    <span style="color:#000000; font-weight:bold">interface_name:</span> eth<span style="color:#b07e00">1</span>
+    <span style="color:#000000; font-weight:bold">ip:</span>
+      dhcp<span style="color:#b07e00">4</span>: no
+      auto<span style="color:#b07e00">6</span>: no
+
+  - <span style="color:#000000; font-weight:bold">name:</span> eth<span style="color:#b07e00">1.6</span>
+    <span style="color:#000000; font-weight:bold">autoconnect:</span> no
+    <span style="color:#000000; font-weight:bold">type:</span> vlan
+    <span style="color:#000000; font-weight:bold">parent:</span> eth<span style="color:#b07e00">1</span>-profile
+    <span style="color:#000000; font-weight:bold">vlan:</span>
+      <span style="color:#000000; font-weight:bold">id:</span> <span style="color:#b07e00">6</span>
+    <span style="color:#000000; font-weight:bold">ip:</span>
+      <span style="color:#000000; font-weight:bold">address:</span>
+        - <span style="color:#b07e00">192.0.2.5</span>/<span style="color:#b07e00">24</span>
+      auto<span style="color:#b07e00">6</span>: no</code></pre>
+</div></div>
+<div class="paragraph"><p>Configuring MACVLAN:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> eth<span style="color:#b07e00">0</span>-profile
+    <span style="color:#000000; font-weight:bold">type:</span> ethernet
+    <span style="color:#000000; font-weight:bold">interface_name:</span> eth<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">ip:</span>
+      <span style="color:#000000; font-weight:bold">address:</span>
+        - <span style="color:#b07e00">192.168.0.1</span>/<span style="color:#b07e00">24</span>
+
+  - <span style="color:#000000; font-weight:bold">name:</span> veth<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">type:</span> macvlan
+    <span style="color:#000000; font-weight:bold">parent:</span> eth<span style="color:#b07e00">0</span>-profile
+    <span style="color:#000000; font-weight:bold">macvlan:</span>
+      <span style="color:#000000; font-weight:bold">mode:</span> bridge
+      <span style="color:#000000; font-weight:bold">promiscuous:</span> yes
+      <span style="color:#000000; font-weight:bold">tap:</span> no
+    <span style="color:#000000; font-weight:bold">ip:</span>
+      <span style="color:#000000; font-weight:bold">address:</span>
+        - <span style="color:#b07e00">192.168.1.1</span>/<span style="color:#b07e00">24</span></code></pre>
+</div></div>
+<div class="paragraph"><p>Configuring a wireless connection:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> wlan<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">type:</span> wireless
+    <span style="color:#000000; font-weight:bold">wireless:</span>
+      <span style="color:#000000; font-weight:bold">ssid:</span> <span style="color:#bf0303">&quot;My WPA2-PSK Network&quot;</span>
+      <span style="color:#000000; font-weight:bold">key_mgmt:</span> <span style="color:#bf0303">&quot;wpa-psk&quot;</span>
+      <span style="color:#838183; font-style:italic"># recommend vault encrypting the wireless password</span>
+      <span style="color:#838183; font-style:italic"># see https://docs.ansible.com/ansible/latest/user_guide/vault.html</span>
+      <span style="color:#000000; font-weight:bold">password:</span> <span style="color:#bf0303">&quot;p&#64;55w0rD&quot;</span></code></pre>
+</div></div>
+<div class="paragraph"><p>Setting the IP configuration:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> eth<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">type:</span> ethernet
+    <span style="color:#000000; font-weight:bold">ip:</span>
+      route_metric<span style="color:#b07e00">4</span>: <span style="color:#b07e00">100</span>
+      dhcp<span style="color:#b07e00">4</span>: no
+      <span style="color:#838183; font-style:italic">#dhcp4_send_hostname: no</span>
+      gateway<span style="color:#b07e00">4</span>: <span style="color:#b07e00">192.0.2.1</span>
+
+      <span style="color:#000000; font-weight:bold">dns:</span>
+        - <span style="color:#b07e00">192.0.2.2</span>
+        - <span style="color:#b07e00">198.51.100.5</span>
+      <span style="color:#000000; font-weight:bold">dns_search:</span>
+        - example.com
+        - subdomain.example.com
+
+      route_metric<span style="color:#b07e00">6</span>: -<span style="color:#b07e00">1</span>
+      auto<span style="color:#b07e00">6</span>: no
+      gateway<span style="color:#b07e00">6</span>: <span style="color:#b07e00">2001</span>:db<span style="color:#b07e00">8</span>::<span style="color:#b07e00">1</span>
+
+      <span style="color:#000000; font-weight:bold">address:</span>
+        - <span style="color:#b07e00">192.0.2.3</span>/<span style="color:#b07e00">24</span>
+        - <span style="color:#b07e00">198.51.100.3</span>/<span style="color:#b07e00">26</span>
+        - <span style="color:#b07e00">2001</span>:db<span style="color:#b07e00">8</span>::<span style="color:#b07e00">80</span>/<span style="color:#b07e00">7</span>
+
+      <span style="color:#000000; font-weight:bold">route:</span>
+        - <span style="color:#000000; font-weight:bold">network:</span> <span style="color:#b07e00">198.51.100.128</span>
+          <span style="color:#000000; font-weight:bold">prefix:</span> <span style="color:#b07e00">26</span>
+          <span style="color:#000000; font-weight:bold">gateway:</span> <span style="color:#b07e00">198.51.100.1</span>
+          <span style="color:#000000; font-weight:bold">metric:</span> <span style="color:#b07e00">2</span>
+        - <span style="color:#000000; font-weight:bold">network:</span> <span style="color:#b07e00">198.51.100.64</span>
+          <span style="color:#000000; font-weight:bold">prefix:</span> <span style="color:#b07e00">26</span>
+          <span style="color:#000000; font-weight:bold">gateway:</span> <span style="color:#b07e00">198.51.100.6</span>
+          <span style="color:#000000; font-weight:bold">metric:</span> <span style="color:#b07e00">4</span>
+      <span style="color:#000000; font-weight:bold">route_append_only:</span> no
+      <span style="color:#000000; font-weight:bold">rule_append_only:</span> yes</code></pre>
+</div></div>
+<div class="paragraph"><p>Configuring 802.1x:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code><span style="color:#000000; font-weight:bold">network_connections:</span>
+  - <span style="color:#000000; font-weight:bold">name:</span> eth<span style="color:#b07e00">0</span>
+    <span style="color:#000000; font-weight:bold">type:</span> ethernet
+    ieee<span style="color:#b07e00">802</span>_<span style="color:#b07e00">1</span><span style="color:#000000; font-weight:bold">x:</span>
+      <span style="color:#000000; font-weight:bold">identity:</span> myhost
+      <span style="color:#000000; font-weight:bold">eap:</span> tls
+      <span style="color:#000000; font-weight:bold">private_key:</span> /etc/pki/tls/client.key
+      <span style="color:#838183; font-style:italic"># recommend vault encrypting the private key password</span>
+      <span style="color:#838183; font-style:italic"># see https://docs.ansible.com/ansible/latest/user_guide/vault.html</span>
+      <span style="color:#000000; font-weight:bold">private_key_password:</span> <span style="color:#bf0303">&quot;p&#64;55w0rD&quot;</span>
+      <span style="color:#000000; font-weight:bold">client_cert:</span> /etc/pki/tls/client.pem
+      <span style="color:#000000; font-weight:bold">ca_cert:</span> /etc/pki/tls/cacert.pem
+      <span style="color:#000000; font-weight:bold">domain_suffix_match:</span> example.com</code></pre>
+</div></div>
+<div class="sect3">
+<h4 id="_invalid_and_wrong_configuration">Invalid and Wrong Configuration</h4>
+<div class="paragraph"><p>The <code>network</code> role rejects invalid configurations. It is recommended to
+test the role with <code>--check</code> first. There is no protection against wrong
+(but valid) configuration. Double-check your configuration before
+applying it.</p></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_compatibility">Compatibility</h3>
+<div class="paragraph"><p>The <code>network</code> role supports the same configuration scheme for both
+providers (<code>nm</code> and <code>initscripts</code>). That means, you can use the same
+playbook with NetworkManager and initscripts. However, note that not
+every option is handled exactly the same by every provider. Do a test
+run first with <code>--check</code>.</p></div>
+<div class="paragraph"><p>It is not supported to create a configuration for one provider, and
+expect another provider to handle them. For example, creating profiles
+with the <code>initscripts</code> provider, and later enabling NetworkManager is
+not guaranteed to work automatically. Possibly, you have to adjust the
+configuration so that it can be used by another provider.</p></div>
+<div class="paragraph"><p>For example, configuring a RHEL6 host with initscripts and upgrading to
+RHEL7 while continuing to use initscripts in RHEL7 is an acceptable
+scenario. What is not guaranteed is to upgrade to RHEL7, disable
+initscripts and expect NetworkManager to take over the configuration
+automatically.</p></div>
+<div class="paragraph"><p>Depending on NetworkManager&#8217;s configuration, connections may be stored
+as ifcfg files as well, but it is not guaranteed that plain initscripts
+can handle these ifcfg files after disabling the NetworkManager service.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_limitations">Limitations</h3>
+<div class="paragraph"><p>As Ansible usually works via the network, for example via SSH, there are
+some limitations to be considered:</p></div>
+<div class="paragraph"><p>The <code>network</code> role does not support bootstraping networking
+configuration. One option may be
+<a href="https://docs.ansible.com/ansible/playbooks_intro.html#ansible-pull">ansible-pull</a>.
+Another option maybe be to initially auto-configure the host during
+installation (ISO based, kickstart, etc.), so that the host is connected
+to a management LAN or VLAN. It strongly depends on your environment.</p></div>
+<div class="paragraph"><p>For <code>initscripts</code> provider, deploying a profile merely means to create
+the ifcfg files. Nothing happens automatically until the play issues
+<code>ifup</code> or <code>ifdown</code> via the <code>up</code> or <code>down</code> <a href="#state">states</a>&#8201;&#8212;&#8201;unless
+there are other components that rely on the ifcfg files and react on
+changes.</p></div>
+<div class="paragraph"><p>The <code>initscripts</code> provider requires the different profiles to be in the
+right order when they depend on each other. For example the bonding
+master device needs to be specified before the slave devices.</p></div>
+<div class="paragraph"><p>When removing a profile for NetworkManager it also takes the connection
+down and possibly removes virtual interfaces. With the <code>initscripts</code>
+provider removing a profile does not change its current runtime state
+(this is a future feature for NetworkManager as well).</p></div>
+<div class="paragraph"><p>For NetworkManager, modifying a connection with autoconnect enabled may
+result in the activation of a new profile on a previously disconnected
+interface. Also, deleting a NetworkManager connection that is currently
+active results in removing the interface. Therefore, the order of the
+steps should be followed, and carefully handling of
+<a href="#autoconnect">autoconnect</a> property may be necessary. This should be
+improved in NetworkManager RFE
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=1401515">rh#1401515</a>.</p></div>
+<div class="paragraph"><p>It seems difficult to change networking of the target host in a way that
+breaks the current SSH connection of ansible. If you want to do that,
+ansible-pull might be a solution. Alternatively, a combination of
+<code>async</code>/<code>poll</code> with changing the <code>ansible_host</code> midway of the play.</p></div>
+<div class="paragraph"><p><strong>TODO</strong> The current role does not yet support to easily split the play in
+a pre-configure step, and a second step to activate the new
+configuration.</p></div>
+<div class="paragraph"><p>In general, to successfully run the play, determine which configuration
+is active in the first place, and then carefully configure a sequence of
+steps to change to the new configuration. The actual solution depends
+strongly on your environment.</p></div>
+<div class="sect3">
+<h4 id="_handling_potential_problems">Handling potential problems</h4>
+<div class="paragraph"><p>When something goes wrong while configuring networking remotely, you
+might need to get physical access to the machine to recover.</p></div>
+<div class="paragraph"><p><strong>TODO</strong> NetworkManager supports a
+<a href="https://developer.gnome.org/NetworkManager/stable/gdbus-org.freedesktop.NetworkManager.html#gdbus-method-org-freedesktop-NetworkManager.CheckpointCreate">checkpoint/rollback</a>
+feature. At the beginning of the play we could create a checkpoint and
+if we lose connectivity due to an error, NetworkManager would
+automatically rollback after timeout. The limitations is that this would
+only work with NetworkManager, and it is not clear that rollback will
+result in a working configuration.</p></div>
+<div class="paragraph"><p><em>Want to contribute? Take a look at our
+<a href="https://github.com/linux-system-roles/network/blob/master/contributing.md">contributing
+guidelines</a>!</em></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+</div>
+</body>
+</html>

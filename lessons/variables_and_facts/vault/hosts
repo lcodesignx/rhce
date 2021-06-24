@@ -1,0 +1,12 @@
+[vms]
+vm[1:3]
+
+[lamp]
+vm1
+
+[file]
+vm2
+
+[nodes:children]
+lamp
+file

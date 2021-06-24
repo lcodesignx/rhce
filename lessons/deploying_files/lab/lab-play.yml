@@ -1,0 +1,60 @@
+---
+- hosts: rhel03
+  become: true
+  vars:
+      anonymous_enable: yes
+      local_enable: yes
+      write_enable: yes
+      anon_upload_enable: yes
+
+  tasks:
+      - name: ensure vsftpd is installed
+        yum:
+            name: vsftpd
+            state: present
+
+      - name: ensure vsftpd service is started and enabled
+        service:
+            name: vsftpd
+            state: started
+            enabled: yes
+
+      - name: enable firewall ftp service
+        firewalld:
+            service: ftp
+            state: enabled
+            permanent: yes
+            immediate: yes
+
+      - name: configure VSFTPD using a template
+        template:
+            src: lab-vsftpd.j2
+            dest: /etc/vsftpd/vsftpd.conf
+
+      - name: install required selinux tools
+        yum:
+            name: policycoreutils-python-utils
+            state: present
+        
+      - name: ensure /var/ftp/pub is configured with the appropriate permissions
+        ansible.builtin.file:
+            path: /var/ftp/pub
+            mode: '0777'
+
+      - name: set selinux boolean
+        seboolean:
+            name: ftpd_anon_write
+            state: yes
+            persistent: yes
+
+      - name: manage selinux settings
+        sefcontext:
+            target: /var/ftp/pub
+            setype: public_content_rw_t
+            state: present
+        notify:
+            - run restorecon
+
+  handlers:
+      - name: run restorecon
+        command: restorecon -vR /var/ftp/pub

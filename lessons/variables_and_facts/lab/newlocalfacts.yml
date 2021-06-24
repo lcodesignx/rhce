@@ -1,0 +1,25 @@
+---
+- name: lab playbook
+  hosts: lamp
+  vars:
+    remote_dir: /etc/ansible/facts.d
+    facts_file: localfacts.fact
+  tasks:
+    - name: create fact directory
+      file:
+        state: directory
+        recurse: yes
+        path: "{{ remote_dir }}"
+    - name: install new facts
+      copy:
+        src: "{{ facts_file }}"
+        dest: "{{ remote_dir }}"
+    - name: install smb service
+      yum:
+        name: "{{ ansible_facts.localfacts.smbfacts.package }}"
+        state: present
+    - name: ensure the smb service is started and enabled
+      service:
+        name: "{{ ansible_facts.localfacts.smbfacts.service }}"
+        state: "{{ ansible_facts.localfacts.smbfacts.state }}"
+        enabled: yes

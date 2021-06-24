@@ -1,0 +1,30 @@
+---
+- name: file copy modules
+  hosts: all
+  tasks:
+      - name: copy file demo
+        copy:
+            src: /etc/hosts
+            dest: /tmp
+
+      - name: add some lines to /tmp/hosts
+        blockinfile:
+            path: /tmp/hosts
+            block: |
+                10.1.10.9  rhel02
+                10.1.10.10 rhel03
+            state: present
+
+      - name: verify file checksum
+        stat:
+            path: /tmp/hosts
+            checksum_algorithm: md5
+        register: result
+
+      - debug:
+          msg: "The checksum of /tmp/hosts is {{ result.stat.checksum }}"
+
+      - name: fetch a file
+        fetch:
+            src: /tmp/hosts
+            dest: /tmp

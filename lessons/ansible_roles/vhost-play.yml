@@ -1,0 +1,12 @@
+---
+- name: create apache vhost
+  hosts: lamp
+
+  roles:
+      - vhost
+
+  pre_tasks:
+      - name: install contents from local file
+        copy:
+            src: files/html/
+            dest: "/var/www/vhosts/{{ ansible_hostname }}"

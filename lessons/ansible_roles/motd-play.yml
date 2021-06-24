@@ -1,0 +1,8 @@
+---
+- name: use motd role playbook
+  hosts: rhel02
+  become: true
+
+  roles:
+      - role: motd
+        system_manager: lupera1@jhuapl.edu

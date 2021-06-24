@@ -1,0 +1,7 @@
+---
+- name: use galaxy nginx role
+  hosts: rhel02
+  become: true
+
+  roles:
+      - role: nginx-role

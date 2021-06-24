@@ -1,0 +1,9 @@
+[rhel]
+rhel-master
+rhel0[2:3]
+
+[swarm]
+ab1-docker-[1:5]
+
+[all:vars]
+ansible_user=lupera1

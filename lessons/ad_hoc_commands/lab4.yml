@@ -1,0 +1,24 @@
+---
+- name: lab4
+  hosts: docker-node-1
+  become_user: lupera1
+  tasks:
+    - name: install httpd
+      yum: name=httpd state=present
+    - name: ensure httpd is started and enabled
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+    - name: open firewall to allow access to httpd
+      firewalld:
+        service: http
+        permanent: yes
+        state: enabled
+        immediate: yes
+    - name: create welcome text file
+      copy:
+        content: "welcome to this WEB server"
+        dest: /var/www/html/index.html
+        force: no
+        mode: 0444
