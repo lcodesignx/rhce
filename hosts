@@ -1,8 +1,16 @@
-[rhel]
-rhel0[1:3]
+[control]
+localhost ansible_connection=local
 
-[lamp]
+[test]
+rhel01
+
+[dev]
 rhel02
 
-[all:vars]
-ansible_user=lupera1
+[prod]
+rhel03
+rhel04
+
+[servers:children]
+dev
+prod
