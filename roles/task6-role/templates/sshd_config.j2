@@ -38,10 +38,10 @@ SyslogFacility AUTHPRIV
 #LogLevel INFO
 
 # Authentication:
-AllowedUsers "{{ allowed_users }}"
+AllowUsers {{ allow_users }}
 
 #LoginGraceTime 2m
-PermitRootLogin "{{ permit_root }}"
+PermitRootLogin {{ permit_root }}
 #StrictModes yes
 #MaxAuthTries 6
 #MaxSessions 10

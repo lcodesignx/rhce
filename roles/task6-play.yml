@@ -4,8 +4,8 @@
   become: yes
   vars:
     ssh_port: 2022
-    allowed_users: 'ansible, root'
-    permit_root: 'no'
+    allow_users: ansible, root
+    permit_root: yes
 
   tasks:
     - name: ensure SELinux is in enforcing mode
