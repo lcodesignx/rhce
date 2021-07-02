@@ -1,9 +1,0 @@
-127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-
-# temp
-172.16.0.136    rhelc
-172.16.0.129    rhel01
-172.16.0.133    rhel02
-172.16.0.134    rhel03
-172.16.0.135    rhel04
