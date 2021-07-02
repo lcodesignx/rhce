@@ -1,0 +1,15 @@
+[control]
+ansiblec
+
+[test]
+ansible1
+
+[dev]
+ansible2
+
+[prod]
+ansible[3:4]
+
+[servers:children]
+dev
+prod
