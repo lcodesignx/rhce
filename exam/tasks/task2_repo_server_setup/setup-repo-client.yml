@@ -1,0 +1,19 @@
+---
+- hosts: servers
+  become: yes
+  tasks:
+    - name: setup BaseOS repository
+      yum_repository:
+        name: BaseOS
+        description: BaseOS Repository
+        file: BaseOS
+        baseurl: ftp://ansiblec/var/ftp/repo/BaseOS
+        gpgcheck: no
+
+    - name: setup AppStream repository
+      yum_repository:
+        name: AppStream
+        description: AppStream Repository
+        file: AppStream
+        baseurl: ftp://ansiblec/var/ftp/repo/AppStream
+        gpgcheck: no

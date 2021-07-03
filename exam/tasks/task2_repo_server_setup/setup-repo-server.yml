@@ -1,0 +1,55 @@
+---
+- name: Setting up Repository Server
+  hosts: ansiblec
+  become: true
+  vars:
+      rhel8_repos:
+          - rhel-8-for-x86_64-appstream-rpms
+          - rhel-8-for-x86_64-baseos-rpms
+          - rhel-8-for-x86_64-supplementary-rpms
+          - JHUAPL_EPEL_8_EPEL_8
+
+  handlers:
+      - name: restart vsftpd
+        service:
+            name: vsftpd
+            state: restarted
+  tasks:
+    - name: install vsftpd package
+      package:
+        name: vsftpd
+        state: installed
+
+    - name: ensure vsftpd service is started and enabled
+      service:
+        name: vsftpd
+        state: started
+        enabled: yes
+
+    - name: enable ftp port in firewall
+      firewalld:
+        service: ftp
+        permanent: yes
+        state: enabled
+        immediate: yes
+
+    - name: create repo directory
+      file:
+        path: /var/ftp/repo
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: reposync rhel8 repos
+      command: reposync -p /var/ftp/repos --download-metadata --repo="{{ item }}" -n
+      loop: "{{ rhel8_repos }}"
+      tags: ['reposync']
+
+    - name: allow anonymous user access to /var/ftp/repo directory
+      lineinfile:
+        path: /etc/vsftpd/vsftpd.conf
+        regexp: 'anonymous_enable=NO'
+        line: 'anonymous_enable=YES'
+      tags: ['enable']
+      notify: restart vsftpd
