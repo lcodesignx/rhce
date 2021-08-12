@@ -1,0 +1,17 @@
+---
+- name: Implementing Handlers
+  hosts: all
+  become: true
+  tasks:
+    - name: copy demo.example.conf configuration template
+      template:
+        src: /var/lib/templates/demo.example.conf.template
+        dest: /etc/httpd/conf.d/demo.example.conf
+      notify:
+        - restart apache
+
+  handlers:
+    - name: restart apache
+      service:
+        name: httpd
+        state: restarted

@@ -1,0 +1,14 @@
+---
+- name: Deploying Jinja2 Templates
+  hosts: rhel01
+  become: true
+  vars:
+      ssh_port: 22
+      root_allowed: NO
+      groups_allowed: unix-users
+      passwords_allowed: YES
+  tasks:
+      - name: template render
+        template:
+            src: j2-template.j2
+            dest: /tmp/dest-config-file.txt

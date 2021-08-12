@@ -1,0 +1,14 @@
+---
+- name: Configure SOE
+  hosts: all
+  become: true
+  vars:
+    - system_owner: lupera1@jhuapl.edu
+  tasks:
+    - name: configure /etc/motd
+      template:
+        src: motd.j2
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: 0644

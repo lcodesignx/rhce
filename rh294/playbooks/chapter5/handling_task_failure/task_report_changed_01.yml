@@ -1,0 +1,8 @@
+---
+- name: Specifying When a Task Reports "Changed" Results
+  hosts: all
+  become: true
+  tasks:
+    - name: get kerberos credentials as "admin"
+      shell: echo "{{ krb_admin_pass }}" | kinit -f admin
+      changed_when: false

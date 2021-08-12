@@ -1,0 +1,23 @@
+---
+- name: Retrieving the Status of a File on Managed Hosts
+  hosts: all
+  become: true
+  tasks:
+    - name: Verify the checksum of a file
+      stat:
+        path: /etc/my.cnf
+        checksum_algorithm: md5
+      register: result
+
+    - name: Debugging
+      debug:
+        msg: "The checksum of the file is {{ result.stat.checksum }}"
+
+    - name: Examine all stat output of /etc/passwd
+      stat:
+        path: /etc/passwd
+      register: results
+
+    - name: Display stat results
+      debug:
+        var: results

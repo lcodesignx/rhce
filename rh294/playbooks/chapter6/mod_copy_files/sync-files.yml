@@ -1,0 +1,9 @@
+---
+- name: Synchronizing Files Between the Control Node and Managed Hosts
+  hosts: all
+  become: true
+  tasks:
+    - name: synchronize local file to remote files
+      synchronize:
+        src: file
+        dest: /path/to/file

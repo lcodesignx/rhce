@@ -1,0 +1,11 @@
+---
+- name: Ensuring a File Exists on Managed Hosts
+  hosts: all
+  tasks:
+    - name: Touch a file and set permissions
+      file:
+        path: /path/to/file
+        owner: user1
+        group: group1
+        mode: 0640
+        state: touch

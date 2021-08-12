@@ -1,0 +1,13 @@
+[test]
+rhel01
+
+[dev]
+rhel02
+
+[prod]
+rhel03
+rhel04
+
+[servers:children]
+dev
+prod

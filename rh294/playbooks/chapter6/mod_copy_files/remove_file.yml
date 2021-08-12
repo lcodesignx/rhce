@@ -1,0 +1,8 @@
+---
+- name: Removing a File from Managed Hosts
+  hosts: all
+  tasks:
+    - name: Make sure a file does not exist on managed hosts
+      file:
+        dest: /path/to/file
+        state: absent

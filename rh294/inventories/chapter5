@@ -1,0 +1,5 @@
+[database_dev]
+rhel01
+
+[database_prod]
+rhel02

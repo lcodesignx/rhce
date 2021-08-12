@@ -1,0 +1,116 @@
+Aug  8 20:50:27 rhel02 sshd[15206]: Accepted publickey for lupera1 from 172.16.0.39 port 59776 ssh2: RSA SHA256:B2vrROnOGop3gCpcKsQu9Yhw8ZIvcrkzAqHTUnvwEXc
+Aug  8 20:50:27 rhel02 systemd[15210]: pam_unix(systemd-user:session): session opened for user lupera1 by (uid=0)
+Aug  8 20:50:27 rhel02 sshd[15206]: pam_unix(sshd:session): session opened for user lupera1 by (uid=0)
+Aug  8 20:51:29 rhel02 sshd[15221]: Received disconnect from 172.16.0.39 port 59776:11: disconnected by user
+Aug  8 20:51:29 rhel02 sshd[15221]: Disconnected from user lupera1 172.16.0.39 port 59776
+Aug  8 20:51:29 rhel02 sshd[15206]: pam_unix(sshd:session): session closed for user lupera1
+Aug  8 20:51:29 rhel02 systemd[15215]: pam_unix(systemd-user:session): session closed for user lupera1
+Aug  9 13:11:00 rhel02 sshd[16293]: Accepted publickey for lupera1 from 172.16.0.39 port 64960 ssh2: RSA SHA256:B2vrROnOGop3gCpcKsQu9Yhw8ZIvcrkzAqHTUnvwEXc
+Aug  9 13:11:00 rhel02 systemd[16297]: pam_unix(systemd-user:session): session opened for user lupera1 by (uid=0)
+Aug  9 13:11:00 rhel02 sshd[16293]: pam_unix(sshd:session): session opened for user lupera1 by (uid=0)
+Aug  9 13:11:01 rhel02 sudo[16430]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-gabhoojtnwpxreczvbvrasfjhhtmgzum ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628529060.226215-62020-198149892754027/AnsiballZ_command.py
+Aug  9 13:11:01 rhel02 sudo[16430]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug  9 13:11:01 rhel02 sudo[16430]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)
+Aug  9 13:11:04 rhel02 sudo[16430]: pam_unix(sudo:session): session closed for user root
+Aug  9 13:12:04 rhel02 sshd[16308]: Received disconnect from 172.16.0.39 port 64960:11: disconnected by user
+Aug  9 13:12:04 rhel02 sshd[16308]: Disconnected from user lupera1 172.16.0.39 port 64960
+Aug  9 13:12:04 rhel02 sshd[16293]: pam_unix(sshd:session): session closed for user lupera1
+Aug  9 13:12:04 rhel02 systemd[16302]: pam_unix(systemd-user:session): session closed for user lupera1
+Aug  9 15:11:52 rhel02 sshd[16549]: Accepted publickey for lupera1 from 172.16.0.39 port 50052 ssh2: RSA SHA256:B2vrROnOGop3gCpcKsQu9Yhw8ZIvcrkzAqHTUnvwEXc
+Aug  9 15:11:52 rhel02 systemd[16553]: pam_unix(systemd-user:session): session opened for user lupera1 by (uid=0)
+Aug  9 15:11:52 rhel02 sshd[16549]: pam_unix(sshd:session): session opened for user lupera1 by (uid=0)
+Aug  9 15:11:55 rhel02 sudo[16686]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-xqbipyqihlqpofhpgwzlznavcggaiwpt ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628536312.331291-63213-225488844138808/AnsiballZ_setup.py
+Aug  9 15:11:55 rhel02 sudo[16686]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug  9 15:11:55 rhel02 sudo[16686]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)
+Aug  9 15:11:56 rhel02 sudo[16686]: pam_unix(sudo:session): session closed for user root
+Aug  9 15:11:59 rhel02 sudo[16826]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-uxqafzgpbdwdihmfxoecqfenuogffich ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628536318.409151-63297-208641827833587/AnsiballZ_authorized_key.py
+Aug  9 15:11:59 rhel02 sudo[16826]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug  9 15:11:59 rhel02 sudo[16826]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)
+Aug  9 15:11:59 rhel02 sudo[16826]: pam_unix(sudo:session): session closed for user root
+Aug  9 15:13:00 rhel02 sshd[16564]: Received disconnect from 172.16.0.39 port 50052:11: disconnected by user
+Aug  9 15:13:00 rhel02 sshd[16564]: Disconnected from user lupera1 172.16.0.39 port 50052
+Aug  9 15:13:00 rhel02 sshd[16549]: pam_unix(sshd:session): session closed for user lupera1
+Aug  9 15:13:00 rhel02 systemd[16558]: pam_unix(systemd-user:session): session closed for user lupera1
+Aug  9 15:13:34 rhel02 sshd[16857]: Accepted publickey for lupera1 from 172.16.0.39 port 50068 ssh2: RSA SHA256:B2vrROnOGop3gCpcKsQu9Yhw8ZIvcrkzAqHTUnvwEXc
+Aug  9 15:13:34 rhel02 systemd[16861]: pam_unix(systemd-user:session): session opened for user lupera1 by (uid=0)
+Aug  9 15:13:34 rhel02 sshd[16857]: pam_unix(sshd:session): session opened for user lupera1 by (uid=0)
+Aug  9 15:13:35 rhel02 sudo[16994]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-rqzjzvjejhfpbmakixbzihrzsbwtrqus ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628536414.384553-63377-14911308660923/AnsiballZ_setup.py
+Aug  9 15:13:35 rhel02 sudo[16994]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug  9 15:13:35 rhel02 sudo[16994]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)
+Aug  9 15:13:37 rhel02 sudo[16994]: pam_unix(sudo:session): session closed for user root
+Aug  9 15:13:39 rhel02 sudo[17134]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-htzeodjdoncdmhccnthlugpevskhopar ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628536418.593301-63461-81534022733752/AnsiballZ_authorized_key.py
+Aug  9 15:13:39 rhel02 sudo[17134]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug  9 15:13:39 rhel02 sudo[17134]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)
+Aug  9 15:13:40 rhel02 sudo[17134]: pam_unix(sudo:session): session closed for user root
+Aug  9 15:14:40 rhel02 sshd[16872]: Received disconnect from 172.16.0.39 port 50068:11: disconnected by user
+Aug  9 15:14:40 rhel02 sshd[16872]: Disconnected from user lupera1 172.16.0.39 port 50068
+Aug  9 15:14:40 rhel02 sshd[16857]: pam_unix(sshd:session): session closed for user lupera1
+Aug  9 15:14:40 rhel02 systemd[16866]: pam_unix(systemd-user:session): session closed for user lupera1
+Aug 11 10:38:16 rhel02 sshd[19670]: Accepted publickey for lupera1 from 172.16.0.39 port 57340 ssh2: RSA SHA256:B2vrROnOGop3gCpcKsQu9Yhw8ZIvcrkzAqHTUnvwEXc
+Aug 11 10:38:16 rhel02 systemd[19674]: pam_unix(systemd-user:session): session opened for user lupera1 by (uid=0)
+Aug 11 10:38:16 rhel02 sshd[19670]: pam_unix(sshd:session): session opened for user lupera1 by (uid=0)
+Aug 11 10:40:18 rhel02 sshd[19684]: Received disconnect from 172.16.0.39 port 57340:11: disconnected by user
+Aug 11 10:40:18 rhel02 sshd[19684]: Disconnected from user lupera1 172.16.0.39 port 57340
+Aug 11 10:40:18 rhel02 sshd[19670]: pam_unix(sshd:session): session closed for user lupera1
+Aug 11 10:40:18 rhel02 systemd[19678]: pam_unix(systemd-user:session): session closed for user lupera1
+Aug 11 11:27:56 rhel02 sshd[19996]: Accepted publickey for lupera1 from 172.16.0.39 port 58205 ssh2: RSA SHA256:B2vrROnOGop3gCpcKsQu9Yhw8ZIvcrkzAqHTUnvwEXc
+Aug 11 11:27:57 rhel02 systemd[20000]: pam_unix(systemd-user:session): session opened for user lupera1 by (uid=0)
+Aug 11 11:27:57 rhel02 sshd[19996]: pam_unix(sshd:session): session opened for user lupera1 by (uid=0)
+Aug 11 11:28:00 rhel02 sudo[20133]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-vrtkeepsgzdciqknghyokjiosbgbdeou ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628695678.065202-71693-224648150520371/AnsiballZ_setup.py
+Aug 11 11:28:00 rhel02 sudo[20133]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug 11 11:28:00 rhel02 sudo[20133]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)
+Aug 11 11:28:03 rhel02 sudo[20133]: pam_unix(sudo:session): session closed for user root
+Aug 11 11:28:04 rhel02 sudo[20273]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-poiczpoptinvtiopvuqmtsnivbgwxcor ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628695683.9469068-71714-264676334775751/AnsiballZ_dnf.py
+Aug 11 11:28:04 rhel02 sudo[20273]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug 11 11:28:04 rhel02 sudo[20273]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)
+Aug 11 11:28:11 rhel02 groupadd[20311]: group added to /etc/group: name=apache, GID=48
+Aug 11 11:28:11 rhel02 groupadd[20311]: group added to /etc/gshadow: name=apache
+Aug 11 11:28:11 rhel02 groupadd[20311]: new group: name=apache, GID=48
+Aug 11 11:28:11 rhel02 useradd[20318]: new user: name=apache, UID=48, GID=48, home=/usr/share/httpd, shell=/sbin/nologin
+Aug 11 11:28:13 rhel02 sudo[20273]: pam_unix(sudo:session): session closed for user root
+Aug 11 11:29:14 rhel02 sshd[20011]: Received disconnect from 172.16.0.39 port 58205:11: disconnected by user
+Aug 11 11:29:14 rhel02 sshd[20011]: Disconnected from user lupera1 172.16.0.39 port 58205
+Aug 11 11:29:14 rhel02 sshd[19996]: pam_unix(sshd:session): session closed for user lupera1
+Aug 11 11:29:28 rhel02 sshd[28846]: Accepted publickey for lupera1 from 172.16.0.39 port 58222 ssh2: RSA SHA256:B2vrROnOGop3gCpcKsQu9Yhw8ZIvcrkzAqHTUnvwEXc
+Aug 11 11:29:28 rhel02 systemd[28850]: pam_unix(systemd-user:session): session opened for user lupera1 by (uid=0)
+Aug 11 11:29:28 rhel02 sshd[28846]: pam_unix(sshd:session): session opened for user lupera1 by (uid=0)
+Aug 11 11:30:30 rhel02 sshd[28860]: Received disconnect from 172.16.0.39 port 58222:11: disconnected by user
+Aug 11 11:30:30 rhel02 sshd[28860]: Disconnected from user lupera1 172.16.0.39 port 58222
+Aug 11 11:30:30 rhel02 sshd[28846]: pam_unix(sshd:session): session closed for user lupera1
+Aug 11 11:30:30 rhel02 systemd[28854]: pam_unix(systemd-user:session): session closed for user lupera1
+Aug 11 11:40:23 rhel02 sshd[29087]: Accepted publickey for lupera1 from 172.16.0.39 port 58324 ssh2: RSA SHA256:B2vrROnOGop3gCpcKsQu9Yhw8ZIvcrkzAqHTUnvwEXc
+Aug 11 11:40:23 rhel02 systemd[29091]: pam_unix(systemd-user:session): session opened for user lupera1 by (uid=0)
+Aug 11 11:40:23 rhel02 sshd[29087]: pam_unix(sshd:session): session opened for user lupera1 by (uid=0)
+Aug 11 11:40:24 rhel02 sudo[29224]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-lkqncjryymlcxgibhtycwiikpzbxcxsb ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628696423.440012-73142-961116200706/AnsiballZ_setup.py
+Aug 11 11:40:24 rhel02 sudo[29224]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug 11 11:40:24 rhel02 sudo[29224]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)
+Aug 11 11:40:25 rhel02 sudo[29224]: pam_unix(sudo:session): session closed for user root
+Aug 11 11:41:25 rhel02 sshd[29102]: Received disconnect from 172.16.0.39 port 58324:11: disconnected by user
+Aug 11 11:41:25 rhel02 sshd[29102]: Disconnected from user lupera1 172.16.0.39 port 58324
+Aug 11 11:41:25 rhel02 sshd[29087]: pam_unix(sshd:session): session closed for user lupera1
+Aug 11 11:41:25 rhel02 systemd[29096]: pam_unix(systemd-user:session): session closed for user lupera1
+Aug 11 12:00:46 rhel02 sshd[29291]: Accepted publickey for lupera1 from 172.16.0.39 port 58711 ssh2: RSA SHA256:B2vrROnOGop3gCpcKsQu9Yhw8ZIvcrkzAqHTUnvwEXc
+Aug 11 12:00:46 rhel02 systemd[29295]: pam_unix(systemd-user:session): session opened for user lupera1 by (uid=0)
+Aug 11 12:00:46 rhel02 sshd[29291]: pam_unix(sshd:session): session opened for user lupera1 by (uid=0)
+Aug 11 12:00:47 rhel02 sudo[29428]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-nqykilsmygznofryiyvepqosnbogekyo ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628697646.9321358-46612-15770258610032/AnsiballZ_setup.py
+Aug 11 12:00:47 rhel02 sudo[29428]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug 11 12:00:47 rhel02 sudo[29428]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)
+Aug 11 12:00:49 rhel02 sudo[29428]: pam_unix(sudo:session): session closed for user root
+Aug 11 12:00:50 rhel02 sudo[29568]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-uxombxvorwebjmukcrfhzqbzcotqxcdf ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628697649.613504-46633-13856404023820/AnsiballZ_command.py
+Aug 11 12:00:50 rhel02 sudo[29568]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug 11 12:00:50 rhel02 sudo[29568]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)
+Aug 11 12:00:50 rhel02 sudo[29568]: pam_unix(sudo:session): session closed for user root
+Aug 11 12:01:50 rhel02 sshd[29306]: Received disconnect from 172.16.0.39 port 58711:11: disconnected by user
+Aug 11 12:01:50 rhel02 sshd[29306]: Disconnected from user lupera1 172.16.0.39 port 58711
+Aug 11 12:01:50 rhel02 sshd[29291]: pam_unix(sshd:session): session closed for user lupera1
+Aug 11 12:01:50 rhel02 systemd[29300]: pam_unix(systemd-user:session): session closed for user lupera1
+Aug 11 15:38:23 rhel02 sshd[29813]: Accepted publickey for lupera1 from 172.16.0.39 port 60814 ssh2: RSA SHA256:B2vrROnOGop3gCpcKsQu9Yhw8ZIvcrkzAqHTUnvwEXc
+Aug 11 15:38:23 rhel02 systemd[29817]: pam_unix(systemd-user:session): session opened for user lupera1 by (uid=0)
+Aug 11 15:38:23 rhel02 sshd[29813]: pam_unix(sshd:session): session opened for user lupera1 by (uid=0)
+Aug 11 15:38:24 rhel02 sudo[29950]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-vcpqigbakjqdzixigbwsfwvgwjdxwnbr ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628710703.304467-49409-97201205247334/AnsiballZ_setup.py
+Aug 11 15:38:24 rhel02 sudo[29950]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug 11 15:38:24 rhel02 sudo[29950]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)
+Aug 11 15:38:25 rhel02 sudo[29950]: pam_unix(sudo:session): session closed for user root
+Aug 11 15:38:28 rhel02 sudo[30090]: lupera1 : TTY=pts/0 ; PWD=/home/lupera1 ; USER=root ; COMMAND=/bin/sh -c echo BECOME-SUCCESS-tlwvobhgcozpchkuzpxcrdexymjmtmqs ; /usr/libexec/platform-python /home/lupera1/.ansible/tmp/ansible-tmp-1628710707.693418-49493-50205067662225/AnsiballZ_slurp.py
+Aug 11 15:38:28 rhel02 sudo[30090]: pam_systemd(sudo:session): Cannot create session: Already running in a session or user slice
+Aug 11 15:38:28 rhel02 sudo[30090]: pam_unix(sudo:session): session opened for user root by lupera1(uid=0)

@@ -1,0 +1,8 @@
+---
+- name: Modifying File Attributes
+  hosts: all
+  tasks:
+    - name: SELinux type is set to samba_share_t
+      file:
+        path: /path/to/samba_file
+        setype: samba_share_t

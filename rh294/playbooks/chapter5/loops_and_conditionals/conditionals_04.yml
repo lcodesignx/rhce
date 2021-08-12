@@ -1,0 +1,19 @@
+---
+- name: Testing Multiple Conditions
+  hosts: all
+  become: true
+  vars:
+    supported_distros:
+      - RedHat
+      - Fedora
+  tasks:
+    - name: Install httpd using yum, where supported
+      yum:
+        name: httpd
+        state: present
+      when: >
+        ( ansible_distribution == "RedHat" and 
+          ansible_distribution_major_version == "7" )
+        or
+        ( ansible_distribution == "Fedora" and
+          ansible_distribution_major_version == "28" )

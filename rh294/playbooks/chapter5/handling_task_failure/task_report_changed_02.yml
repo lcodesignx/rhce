@@ -1,0 +1,17 @@
+---
+- name: Specifying When a Task Reports "Changed" Results
+  hosts: all
+  become: true
+  tasks:
+    - shell:
+        cmd: /usr/local/bin/upgrade-database
+      register: command_result
+      changed_when: "'Success' in command_result.stdout"
+      notify:
+        - restart_database
+
+  handlers:
+    - name: restart_database
+      service:
+        name: mariadb
+        state: restarted

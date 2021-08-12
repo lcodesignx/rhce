@@ -1,0 +1,9 @@
+---
+- name: /etc/hosts is up to date
+  hosts: all
+  become: true
+  tasks:
+      - name: Deploy /etc/hosts
+        template:
+            src: hosts.j2
+            dest: /etc/hosts

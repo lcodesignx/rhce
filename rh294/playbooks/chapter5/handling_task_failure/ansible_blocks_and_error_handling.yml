@@ -1,0 +1,17 @@
+---
+- name: Ansible Blocks and Error Handling
+  hosts: all
+  become: true
+  tasks:
+    - name: installing and configuring Yum versionlock plugin
+      block:
+        - name: package needed by yum
+          yum:
+            name: yum-plugin-versionlock
+            state: present
+        - name: lock version of tzdata
+          lineinfile:
+            dest: /etc/yum/pluginconf.d/versionlock.list
+            list: tzdata-2016j-1
+            state: present
+          when: ansible_distribution == "RedHat"

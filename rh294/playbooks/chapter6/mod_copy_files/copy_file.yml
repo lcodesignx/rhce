@@ -1,0 +1,27 @@
+---
+- name: Copying and Editing Files on Managed Hosts
+  hosts: all
+  tasks:
+    - name: Copy a file to managed hosts
+      copy:
+        src: file
+        dest: /path/to/file
+
+    - name: Retrieve SSH key from reference host
+      fetch:
+        src: "/home/{{ user }}/.ssh/id_rsa.pub"
+        dest: "files/keys/{{ user }}.pub"
+
+    - name: Add a line of text to a file
+      lineinfile:
+        path: /path/to/file
+        line: 'Add this line to the file'
+        state: present
+
+    - name: Add additional lines to a file
+      blockinfile:
+        path: /path/to/file
+        block: |
+          First line in the additional block of text
+          Second line in the additional block of text
+        state: present
