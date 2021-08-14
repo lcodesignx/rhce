@@ -1,0 +1,8 @@
+---
+- name: Automating Linux Administration Tasks
+  hosts: webservers
+  become: true
+  tasks:
+    - name: Create the webadmins users group
+      group:
+        name: webadmins

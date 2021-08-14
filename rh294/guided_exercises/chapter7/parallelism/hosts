@@ -1,0 +1,5 @@
+[webservers]
+rhel0[1:2]
+
+[dbservers]
+rhel0[3:4]

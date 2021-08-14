@@ -1,0 +1,6 @@
+---
+- name: NIC Configuration
+  hosts: webservers
+  become: true
+  roles:
+    - /usr/share/ansible/roles/rhel-system-roles.network
