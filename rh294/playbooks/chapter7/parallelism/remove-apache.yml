@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: true
+  tasks:
+      - name: Disable httpd service
+        service:
+            name: httpd
+            enabled: no
+            state: stopped
+
+      - name: remove httpd package
+        yum:
+            name: httpd
+            state: absent

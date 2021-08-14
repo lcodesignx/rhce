@@ -1,0 +1,27 @@
+---
+- name: Create Volume Groups and Logical Volumes
+  hosts: dbservers
+  become: true
+  tasks:
+      - name: Create volume group vgdata
+        lvg:
+            vg: vgdata
+            pvs: /dev/sdb,/dev/sdc
+
+      - name: Create a logical volume the size of all remaining space in the volume group vgdata
+        lvol:
+            vg: vgdata
+            lv: lvdata
+            size: 100%FREE
+
+      - name: Create a ext4 filesystem on /dev/vgdata/lvdata
+        filesystem:
+            fstype: ext4
+            dev: /dev/vgdata/lvdata
+
+      - name: Mount logical volume
+        mount:
+            path: /mnt
+            src: /dev/vgdata/lvdata
+            fstype: ext4
+            state: mounted

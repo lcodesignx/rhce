@@ -1,0 +1,20 @@
+---
+- name: Repository Configuration
+  hosts: all
+  become: true
+  vars:
+      custom_pkg: git
+  tasks:
+      - name: Install Example motd package
+        yum:
+            name: "{{ custom_pkg }}"
+            state: present
+
+      - name: Gather Package Facts
+        package_facts:
+            manager: auto
+
+      - name: Show package facts for the custom package
+        debug:
+            var: ansible_facts.packages[custom_pkg]
+        when: custom_pkg in ansible_facts.packages

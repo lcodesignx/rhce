@@ -1,0 +1,8 @@
+[redhat]
+rhel0[1:4]
+
+[webservers]
+rhel0[1:2]
+
+[dbservers]
+rhel0[3:4]

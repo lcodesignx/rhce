@@ -1,0 +1,10 @@
+---
+- name: Change default boot target
+  hosts: all
+  become: true
+  tasks:
+      - name: Default boot target is multi-user
+        file:
+            src: /usr/lib/systemd/system/multi-user.target
+            dest: /etc/systemd/system/default.target
+            state: link

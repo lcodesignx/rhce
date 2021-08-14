@@ -1,0 +1,6 @@
+---
+- name: Install web server
+  hosts: webservers
+  become: true
+  tasks:
+      - include_tasks: webserver_tasks.yml

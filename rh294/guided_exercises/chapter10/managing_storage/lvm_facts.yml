@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+      - name: Gather all lvm facts
+        lvm_facts:
+            name: all
+            component: vg

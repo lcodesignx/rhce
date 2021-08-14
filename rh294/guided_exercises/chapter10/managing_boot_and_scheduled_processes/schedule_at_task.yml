@@ -1,0 +1,12 @@
+---
+- name: Schedule at task
+  hosts: all
+  become: true
+  tasks:
+      - name: Create date and time file
+        at:
+            command: "/usr/bin/date > ~/my_at_date_time\n"
+            count: 1
+            units: minutes
+            unique: yes
+            state: present
