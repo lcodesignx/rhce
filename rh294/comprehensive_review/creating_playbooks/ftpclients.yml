@@ -1,0 +1,8 @@
+---
+- hosts: ftpclients
+  become: true
+  tasks:
+    - name: install lftp package
+      yum:
+        name: lftp
+        state: present

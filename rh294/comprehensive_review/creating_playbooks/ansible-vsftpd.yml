@@ -1,0 +1,51 @@
+---
+- hosts: ftpservers
+  become: true
+  vars_files:
+    - vars/vars.yml
+  tasks:
+    - name: install the {{ vsftpd_package }}
+      yum:
+        name: "{{ vsftpd_package }}"
+        state: present
+
+    - name: ensure the {{ vsftpd_service }} is started and enabled
+      service:
+        name: "{{ vsftpd_service }}"
+        state: started
+        enabled: true
+
+    - name: deploy the vsftpd template file
+      template:
+        src: templates/vsftpd.conf.j2
+        dest: "{{ vsftpd_config_file }}"
+        owner: root
+        group: root
+        mode: 0600
+        setype: etc_t
+      notify: restart vsftpd
+
+    - name: ensure the firewalld package is installed
+      yum:
+        name: firewalld
+        state: present
+
+    - name: allow connections to the ftp service
+      firewalld:
+        service: ftp
+        state: enabled
+        permanent: true
+        immediate: yes
+
+    - name: allow connections to the ftp service
+      firewalld:
+        port: 21000-21020/tcp
+        state: enabled
+        permanent: true
+        immediate: yes
+
+  handlers:
+    - name: restart vsftpd
+      service:
+        name: "{{ vsftpd_service }}"
+        state: restarted

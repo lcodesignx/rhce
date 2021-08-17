@@ -1,2 +1,8 @@
 [dev]
 rhel0[1:4]
+
+[ftpclients]
+rhel03
+
+[ftpservers]
+rhel02

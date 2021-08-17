@@ -1,0 +1,12 @@
+---
+- name: Import ftpclients.yml playbook
+  import_playbook: ftpclients.yml
+
+- name: Import ansible-vsftpd.yml playbook
+  import_playbook: ansible-vsftpd.yml
+  vars:
+    anonymous_enable: yes
+    local_enable: yes
+    write_enable: yes
+    anon_upload_enable: yes
+
