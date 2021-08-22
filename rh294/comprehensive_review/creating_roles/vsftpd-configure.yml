@@ -1,0 +1,10 @@
+---
+- name: Install and configure vsftpd
+  hosts: ftpservers
+  become: true
+  vars:
+    - vsftpd_anon_root: /mnt/share
+    - vsftpd_local_root: /mnt/share
+  roles:
+    - ansible-vsftpd
+  tasks:

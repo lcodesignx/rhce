@@ -1,0 +1,40 @@
+---
+- name: Install vsftpd package
+  yum:
+    name: "{{ vsftpd_package }}"
+    state: present
+
+- name: Start and enable vsftpd service
+  service:
+    name: "{{ vsftpd_service }}"
+    state: started
+    enabled: true
+
+- name: Deploy vsftpd.conf.j2 template
+  template:
+    src: vsftpd.conf.j2
+    dest: /etc/vsftpd/vsftpd.conf
+    owner: root
+    group: root
+    mode: 0644
+    setype: etc_t
+  notify: restart vsftpd
+
+- name: ensure the firewalld package is installed
+  yum:
+    name: firewalld
+    state: present
+
+- name: allow connections to the ftp service
+  firewalld:
+    service: ftp
+    state: enabled
+    permanent: true
+    immediate: yes
+
+- name: allow connections to the ftp service
+  firewalld:
+    port: 21000-21020/tcp
+    state: enabled
+    permanent: true
+    immediate: yes
